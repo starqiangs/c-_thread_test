@@ -4,12 +4,6 @@
 
 #include "Ticket.h"
 
-/*
-backlog:
-    模拟三个窗口同时卖票
-    总数100张
-*/
-
 void SellTicket(Ticket &ticket, int index)
 {
     ticket.SellTicket(index);
