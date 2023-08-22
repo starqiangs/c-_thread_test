@@ -12,7 +12,7 @@ void SellTicket(Ticket &ticket, int index)
 int main()
 {
     std::list<std::thread> ticket_list;
-    Ticket ticket;
+    Ticket ticket(100);
 
     for (int i = 1; i <= 3; i++)
     {

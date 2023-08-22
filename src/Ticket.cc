@@ -1,5 +1,11 @@
 #include "Ticket.h"
 
+
+Ticket::Ticket(int count)
+{
+    this->ticket_count = count;
+}
+
 int Ticket::GetTicketCount()
 {
     return this->ticket_count;
