@@ -1,5 +1,3 @@
-#include <thread>
-
 #include "Ticket.h"
 
 int Ticket::GetTicketCount()
@@ -11,8 +9,10 @@ void Ticket::SellTicket(int id)
 {
     while (this->ticket_count > 0)
     {
+        mtx.lock();
         std::cout << "window:" << id << " sell the number:" << ticket_count << "ticket" << std::endl;
         this->ticket_count--;
+        mtx.unlock();
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
 
